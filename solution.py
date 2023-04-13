@@ -13,5 +13,5 @@ def solution(x_success: int,
                                       nobs=np.array([x_cnt, y_cnt]),
                                       alternative='larger')
     if x_cnt < 5000:
-      return p_value <= 0.09
+        return p_value <= 0.09
     return p_value > 0.09
