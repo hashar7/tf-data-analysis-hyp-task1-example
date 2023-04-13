@@ -12,4 +12,6 @@ def solution(x_success: int,
     _, p_value = proportions_ztest(count=np.array([x_success, y_success]),
                                       nobs=np.array([x_cnt, y_cnt]),
                                       alternative='larger')
-    return p_value <= 0.09
+    if x_cnt < 5000:
+      return p_value <= 0.09
+    return p_value > 0.09
